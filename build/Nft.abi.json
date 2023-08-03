@@ -7,15 +7,12 @@
 			"name": "constructor",
 			"inputs": [
 				{"name":"owner","type":"address"},
-				{"name":"author","type":"address"},
 				{"name":"sendGasTo","type":"address"},
 				{"name":"remainOnNft","type":"uint128"},
 				{"name":"json","type":"string"},
-				{"name":"royalty","type":"map(address,uint8)"},
 				{"name":"indexDeployValue","type":"uint128"},
 				{"name":"indexDestroyValue","type":"uint128"},
-				{"name":"codeIndex","type":"cell"},
-				{"name":"burnFee","type":"uint128"}
+				{"name":"codeIndex","type":"cell"}
 			],
 			"outputs": [
 			]
@@ -23,27 +20,9 @@
 		{
 			"name": "burn",
 			"inputs": [
-				{"name":"sendGasTo","type":"address"}
+				{"name":"dest","type":"address"}
 			],
 			"outputs": [
-			]
-		},
-		{
-			"name": "royaltyInfo",
-			"inputs": [
-				{"name":"answerId","type":"uint32"}
-			],
-			"outputs": [
-				{"name":"royalty","type":"map(address,uint8)"}
-			]
-		},
-		{
-			"name": "author",
-			"inputs": [
-				{"name":"answerId","type":"uint32"}
-			],
-			"outputs": [
-				{"name":"addr","type":"address"}
 			]
 		},
 		{
@@ -142,14 +121,6 @@
 	],
 	"events": [
 		{
-			"name": "NftTransferred",
-			"inputs": [
-				{"name":"to","type":"address"}
-			],
-			"outputs": [
-			]
-		},
-		{
 			"name": "NftCreated",
 			"inputs": [
 				{"name":"id","type":"uint256"},
@@ -202,9 +173,6 @@
 		{"name":"_json","type":"string"},
 		{"name":"_indexDeployValue","type":"uint128"},
 		{"name":"_indexDestroyValue","type":"uint128"},
-		{"name":"_codeIndex","type":"cell"},
-		{"name":"_royalty","type":"map(address,uint8)"},
-		{"name":"_author","type":"address"},
-		{"name":"_burnFee","type":"uint128"}
+		{"name":"_codeIndex","type":"cell"}
 	]
 }

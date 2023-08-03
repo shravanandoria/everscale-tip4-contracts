@@ -2045,6 +2045,8 @@ PUSHINT 0
 SETINDEXQ 2
 PUSHINT 64
 SETINDEXQ 4
+FALSE
+SETINDEXQ 1
 SETGLOB 4
 GETGLOB 10
 .loc ../node_modules/@itgold/everscale-tip/contracts/access/OwnableExternal.sol, 0
